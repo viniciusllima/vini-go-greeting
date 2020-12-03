@@ -10,7 +10,9 @@ func main() {
 	r := gin.Default()
 	r.GET("/greeting", addCors, func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"owner": "Vini Lago",
+			"owner":      "Vini Lago",
+			"greeting":   "FrontEnd Developer | Online Payments",
+			"repository": "https://github.com/viniciusllima/vini-go-greeting",
 		})
 	})
 	r.Run(port()) // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
